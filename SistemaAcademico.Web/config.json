@@ -1,0 +1,6 @@
+{
+  "ConnectionStrings": {
+    "SqlServerConnection": "",
+    "SistemaAcademicoDB": "server=localhost;uid=root;pwd=Ertxcv478ghjopl;database=SistemaAcademicoDB"
+  }
+}
