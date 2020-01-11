@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SistemaAcademico.Web.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ProvaController : Controller
     {
         private readonly IProvaRepositorio _provaRepositorio;

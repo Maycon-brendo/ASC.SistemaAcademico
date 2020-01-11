@@ -23,9 +23,32 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\src\app\NovaPasta1\**" />
+    <Compile Remove="ClientApp\src\app\NovaPasta2\**" />
+    <Compile Remove="ClientApp\src\app\NovaPasta\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\app\NovaPasta1\**" />
+    <Content Remove="ClientApp\src\app\NovaPasta2\**" />
+    <Content Remove="ClientApp\src\app\NovaPasta\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\NovaPasta1\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\NovaPasta2\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\NovaPasta\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\src\app\NovaPasta1\**" />
+    <None Remove="ClientApp\src\app\NovaPasta2\**" />
+    <None Remove="ClientApp\src\app\NovaPasta\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\AlunoController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\modelo\aluno.ts" />
+    <None Remove="ClientApp\src\app\Prova\prova.component.ts" />
+    <None Remove="ClientApp\src\app\Servicos\Aluno\aluno.servico.ts" />
+    <None Remove="ClientApp\src\app\Servicos\Prova\prova.servico.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,9 +56,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\aluno.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Prova\prova.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Servicos\Aluno\aluno.servico.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\Servicos\Prova\prova.servico.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\aluno\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
