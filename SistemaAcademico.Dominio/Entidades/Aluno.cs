@@ -6,7 +6,9 @@ namespace SistemaAcademico.Dominio.Entidades
 {
 	public class Aluno
 	{
-		public int Id { get; set; }
+        public object idTurma;
+
+        public int Id { get; set; }
 
 		public string Nome { get; set; }
 
@@ -16,7 +18,9 @@ namespace SistemaAcademico.Dominio.Entidades
 
 		public int IdTurma { get; set; }
 
-		public virtual ICollection<ProvaAluno> ProvaAlunos{ get; set; }
+        public double NotaFinal { get; set; }
+
+        public virtual ICollection<ProvaAluno> ProvaAlunos{ get; set; }
 
 		
 	}

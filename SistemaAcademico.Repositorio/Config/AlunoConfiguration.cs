@@ -18,6 +18,8 @@ namespace SistemaAcademico.Repositorio.Config
                 .HasMaxLength(50);
             builder.Property(a => a.Idade)
                 .IsRequired();
+            builder.Property(a => a.NotaFinal)
+                .IsRequired();                
             builder.HasOne(a => a.Turma);
 
         }

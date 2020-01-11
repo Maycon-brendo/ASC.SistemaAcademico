@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Weather forecast</h1>
+
+<p>Lista de alunos classificados.</p>
+<p *ngIf="!alunosClassificados"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Nota</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let aluno of alunosClassificados">
+      <td>{{ aluno.nome }}</td>
+      <td>{{ aluno.idade}}</td>
+      <td>{{ aluno.notaFinal}}</td>
+    </tr>
+  </tbody>
+
+</table>

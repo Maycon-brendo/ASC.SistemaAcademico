@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaAcademico.Dominio\SistemaAcademico.Dominio.csproj" />
+    <ProjectReference Include="..\SistemaAcademico.Repositorio\SistemaAcademico.Repositorio.csproj" />
+  </ItemGroup>
+
 </Project>

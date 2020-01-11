@@ -4,4 +4,5 @@ export class Aluno {
   nome: string;
   idade: number;
   idTurma: number;
+  notaFinal: number;
 }
